@@ -105,8 +105,9 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .vtt{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:var(--dk);line-height:1.3}
 
 .dep{background:var(--cr);text-align:center;overflow:hidden}
-.dpsl{max-width:780px;margin:56px auto 0}
-.dps{display:none}.dps.act{display:block}
+.dpsl{max-width:780px;margin:56px auto 0;display:grid;}
+.dps{grid-area:1/1;opacity:0;pointer-events:none;transition:opacity .6s ease;visibility:hidden;}
+.dps.act{opacity:1;pointer-events:auto;visibility:visible;}
 .dqico{font-family:'Cormorant Garamond',serif;font-size:76px;line-height:.8;color:var(--gd);opacity:.25;display:block;margin-bottom:6px}
 .dptx{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,3vw,26px);font-weight:300;font-style:italic;color:var(--dk);line-height:1.65;margin-bottom:36px}
 .dpal{display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -146,6 +147,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .fb{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--wh);background:var(--dk);border:1px solid var(--dk);padding:17px 38px;cursor:pointer;transition:all .3s;margin-top:6px}
 .fb:hover{background:var(--gd);border-color:var(--gd)}
 .fdis{font-size:10px;color:var(--dk2);opacity:.55;margin-top:6px}
+select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233A3020' opacity='.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;}
 .fsuc{display:none;padding:22px;background:rgba(184,135,42,.1);border:1px solid rgba(184,135,42,.28)}
 .fsuc p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--dk)}
 
@@ -547,14 +549,36 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
   </div>
   <div class="lf" id="lf">
     <div class="frow">
-      <input type="text" class="fi" placeholder="Seu nome" id="ln">
-      <input type="email" class="fi" placeholder="Seu e-mail" id="le">
+      <input type="text" class="fi" placeholder="Nome *" id="ln">
+      <input type="email" class="fi" placeholder="E-mail *" id="le">
     </div>
-    <input type="tel" class="fi" placeholder="WhatsApp (opcional)" id="lw">
+    <div class="frow">
+      <input type="tel" class="fi" placeholder="WhatsApp *" id="lw">
+      <select class="fi" id="lorigem">
+        <option value="">Como nos conheceu? *</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Indicação de amigo">Indicação de amigo</option>
+        <option value="Google">Google</option>
+        <option value="Evento">Evento</option>
+        <option value="Outros">Outros</option>
+      </select>
+    </div>
+    <select class="fi" id="lbairro" onchange="toggleOutroBairro(this)">
+      <option value="">Bairro *</option>
+      <option value="Moema">Moema</option>
+      <option value="Campo Belo">Campo Belo</option>
+      <option value="Brooklin">Brooklin</option>
+      <option value="Vila Olímpia">Vila Olímpia</option>
+      <option value="Vila Nova Conceição">Vila Nova Conceição</option>
+      <option value="Itaim Bibi">Itaim Bibi</option>
+      <option value="Jardins">Jardins</option>
+      <option value="Outro">Outro bairro</option>
+    </select>
+    <input type="text" class="fi" id="loutrobairro" placeholder="Qual é o seu bairro?" style="display:none">
     <button class="fb" onclick="sub()">Quero receber as novidades</button>
     <p class="fdis">Seus dados são protegidos. Nada de spam — apenas o que realmente vale a pena.</p>
   </div>
-  <div class="fsuc" id="fsuc"><p>✨ Merci! Você está na nossa lista de novidades.</p></div>
+  <div class="fsuc" id="fsuc"><p>Merci! Você está na nossa lista de novidades.</p></div>
 </section>
 
 <footer>
@@ -611,6 +635,12 @@ let cur=0;
 const sls=document.querySelectorAll('.dps'),dts=document.querySelectorAll('.dpdt');
 function gts(n){sls[cur].classList.remove('act');dts[cur].classList.remove('act');cur=n;sls[cur].classList.add('act');dts[cur].classList.add('act');}
 setInterval(()=>gts((cur+1)%sls.length),5200);
+function toggleOutroBairro(sel){
+  const el=document.getElementById('loutrobairro');
+  const show=sel.value==='Outro';
+  el.style.display=show?'block':'none';
+  if(!show) el.value='';
+}
 function fmtPhone(r){
   const d=r.replace(/\D/g,'');
   if(!d) return null;
@@ -622,8 +652,15 @@ async function sub(){
   const n=document.getElementById('ln').value.trim();
   const e=document.getElementById('le').value.trim();
   const w=document.getElementById('lw').value.trim();
+  const bRaw=document.getElementById('lbairro').value;
+  const b=bRaw==='Outro'?document.getElementById('loutrobairro').value.trim():bRaw;
+  const o=document.getElementById('lorigem').value;
   if(!n||!e){alert('Por favor, preencha seu nome e e-mail.');return;}
-  const phone=w?fmtPhone(w):null;
+  if(!w){alert('Por favor, informe seu WhatsApp.');return;}
+  const phone=fmtPhone(w);
+  if(!phone){alert('WhatsApp inválido. Use o formato: (11) 98765-4321.');return;}
+  if(!o){alert('Por favor, informe como nos conheceu.');return;}
+  if(!b){alert(bRaw==='Outro'?'Por favor, informe seu bairro.':'Por favor, selecione seu bairro.');return;}
   const btn=document.querySelector('.fb');
   const orig=btn.textContent;
   btn.textContent='Enviando...';
@@ -634,7 +671,7 @@ async function sub(){
       headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
       body:JSON.stringify({
         email:e,
-        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone})},
+        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone}),...(b&&{BAIRRO:b}),...(o&&{ORIGEM:o})},
         listIds:[3],
         updateEnabled:true
       })

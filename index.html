@@ -363,7 +363,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
 <section class="sec val" id="valeurs">
   <div class="rv">
     <span class="ey">Nos Valeurs</span>
-    <h2 class="st">Por que <em>La pâte brisée</em>?</h2>
+          <h2 class="st">Os princípios que orientam<br>cada <em>receita</em></h2>
     <div class="sdiv" style="margin:0 auto 0"></div>
   </div>
   <div class="valg">
@@ -436,7 +436,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
 <section id="depoimentos" class="sec dep">
   <div class="rv">
     <span class="ey">Témoignages</span>
-    <h2 class="st">O que dizem sobre<br>nossas <em>tortas</em></h2>
+          <h2 class="st">O que nossos clientes<br>levam da <em>mesa</em></h2>
     <div class="sdiv" style="margin:0 auto 0"></div>
   </div>
   <div class="dpsl">
@@ -469,7 +469,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     <div class="rv ctt-col">
       <div>
         <span class="ey">Livraison &amp; Contact</span>
-        <h2 class="st">Entrega &amp;<br><em>Contato</em></h2>
+        <h2 class="st">Como receber<br>nossas <em>tortas</em></h2>
         <div class="sdiv"></div>
         <p class="sb">Entregamos nos principais bairros de São Paulo. Fale pelo WhatsApp para pedidos, disponibilidade e horários.</p>
         <div class="cinfo">
@@ -550,10 +550,10 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
   <div class="lf" id="lf">
     <div class="frow">
       <input type="text" class="fi" placeholder="Nome *" id="ln">
-      <input type="email" class="fi" placeholder="E-mail *" id="le">
-    </div>
-    <div class="frow">
       <input type="tel" class="fi" placeholder="WhatsApp *" id="lw">
+    </div>
+    <input type="email" class="fi" placeholder="E-mail *" id="le">
+    <div class="frow">
       <select class="fi" id="lorigem">
         <option value="">Como nos conheceu? *</option>
         <option value="Instagram">Instagram</option>
@@ -562,18 +562,18 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         <option value="Evento">Evento</option>
         <option value="Outros">Outros</option>
       </select>
+      <select class="fi" id="lbairro" onchange="toggleOutroBairro(this)">
+        <option value="">Bairro *</option>
+        <option value="Moema">Moema</option>
+        <option value="Campo Belo">Campo Belo</option>
+        <option value="Brooklin">Brooklin</option>
+        <option value="Vila Olímpia">Vila Olímpia</option>
+        <option value="Vila Nova Conceição">Vila Nova Conceição</option>
+        <option value="Itaim Bibi">Itaim Bibi</option>
+        <option value="Jardins">Jardins</option>
+        <option value="Outro">Outro bairro</option>
+      </select>
     </div>
-    <select class="fi" id="lbairro" onchange="toggleOutroBairro(this)">
-      <option value="">Bairro *</option>
-      <option value="Moema">Moema</option>
-      <option value="Campo Belo">Campo Belo</option>
-      <option value="Brooklin">Brooklin</option>
-      <option value="Vila Olímpia">Vila Olímpia</option>
-      <option value="Vila Nova Conceição">Vila Nova Conceição</option>
-      <option value="Itaim Bibi">Itaim Bibi</option>
-      <option value="Jardins">Jardins</option>
-      <option value="Outro">Outro bairro</option>
-    </select>
     <input type="text" class="fi" id="loutrobairro" placeholder="Qual é o seu bairro?" style="display:none">
     <button class="fb" onclick="sub()">Quero receber as novidades</button>
     <p class="fdis">Seus dados são protegidos. Nada de spam — apenas o que realmente vale a pena.</p>
@@ -602,8 +602,8 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         <li><a href="#historia">Nossa História</a></li>
         <li><a href="#produtos">As Tortas</a></li>
         <li><a href="#fundadores">Os Fundadores</a></li>
-        <li><a href="#valeurs">Por que La pâte brisée?</a></li>
-        <li><a href="#contato">Contato &amp; Entrega</a></li>
+        <li><a href="#valeurs">Nossos Princípios</a></li>
+        <li><a href="#contato">Como receber nossas tortas</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
       </ul>
     </div>

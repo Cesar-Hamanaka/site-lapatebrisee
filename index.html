@@ -626,7 +626,7 @@ async function sub(){
       headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
       body:JSON.stringify({
         email:e,
-        attributes:{FIRSTNAME:n,...(w&&{WHATSAPP:w})},
+        attributes:{FIRSTNAME:n,...(w&&{SMS:w})},
         listIds:[3],
         updateEnabled:true
       })

@@ -611,11 +611,19 @@ let cur=0;
 const sls=document.querySelectorAll('.dps'),dts=document.querySelectorAll('.dpdt');
 function gts(n){sls[cur].classList.remove('act');dts[cur].classList.remove('act');cur=n;sls[cur].classList.add('act');dts[cur].classList.add('act');}
 setInterval(()=>gts((cur+1)%sls.length),5200);
+function fmtPhone(r){
+  const d=r.replace(/\D/g,'');
+  if(!d) return null;
+  if(d.startsWith('55')&&d.length>=12) return `+${d}`;
+  if(d.length>=10) return `+55${d}`;
+  return null;
+}
 async function sub(){
   const n=document.getElementById('ln').value.trim();
   const e=document.getElementById('le').value.trim();
   const w=document.getElementById('lw').value.trim();
   if(!n||!e){alert('Por favor, preencha seu nome e e-mail.');return;}
+  const phone=w?fmtPhone(w):null;
   const btn=document.querySelector('.fb');
   const orig=btn.textContent;
   btn.textContent='Enviando...';
@@ -626,7 +634,7 @@ async function sub(){
       headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
       body:JSON.stringify({
         email:e,
-        attributes:{FIRSTNAME:n,...(w&&{SMS:w})},
+        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone})},
         listIds:[3],
         updateEnabled:true
       })
@@ -640,7 +648,7 @@ async function sub(){
         document.getElementById('lf').style.display='none';
         document.getElementById('fsuc').style.display='block';
       } else {
-        alert(`Erro ${r.status}: ${err.code||err.message||JSON.stringify(err)}`);
+        alert('Erro ao cadastrar. Tente novamente.');
         btn.textContent=orig;btn.disabled=false;
       }
     }

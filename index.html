@@ -640,7 +640,7 @@ async function sub(){
         document.getElementById('lf').style.display='none';
         document.getElementById('fsuc').style.display='block';
       } else {
-        alert('Erro ao cadastrar. Tente novamente.');
+        alert(`Erro ${r.status}: ${err.code||err.message||JSON.stringify(err)}`);
         btn.textContent=orig;btn.disabled=false;
       }
     }

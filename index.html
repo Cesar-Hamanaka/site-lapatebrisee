@@ -248,7 +248,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
     </div>
     <div class="hvis rv">
       <div class="hvm">
-        <img src="https://lh3.googleusercontent.com/d/1FqneTaSll4Z-3tx9mPibMUZn0ylxOlV5" alt="Torta La pâte brisée" style="width:100%;height:100%;object-fit:cover;object-position:center" onerror="this.style.display='none'">
+        <img src="images/hero-torta.png" alt="Torta La pâte brisée" style="width:100%;height:100%;object-fit:cover;object-position:center">
       </div>
       <div class="hva"><div class="hvt">"L'art de la<br>pâte brisée"</div></div>
     </div>
@@ -265,7 +265,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
   <div class="fundg">
     <div class="fcard rv">
       <div class="fph fph-cesar">
-        <img src="https://lh3.googleusercontent.com/d/1kNO35i-_L8vr3m9s9_deYaJq9Rhw1q-T" alt="Cesar Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center" onerror="this.style.display='none'">
+        <img src="images/fundador-cesar.png" alt="Cesar Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center">
       </div>
       <div class="frl">Co-fundador</div>
       <div class="fnm">Cesar Hamanaka</div>
@@ -275,7 +275,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
     </div>
     <div class="fcard rv">
       <div class="fph fph-caio">
-        <img src="https://lh3.googleusercontent.com/d/1AbMRpGoPQUSyRHSUs9G5AnN7IaIMjNxJ" alt="Caio Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center" onerror="this.style.display='none'">
+        <img src="images/fundador-caio.png" alt="Caio Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center">
       </div>
       <div class="frl">Chef &amp; Co-fundador</div>
       <div class="fnm">Caio Hamanaka</div>
@@ -297,7 +297,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
     <div class="prdg">
       <div class="pc rv">
         <div class="pc-photo pf-frango">
-          <img src="https://drive.google.com/uc?export=view&id=1H74n4qA00X3TLpZl3fQCZXicx-V2RfB9" alt="Frango com Catupiry" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <img src="images/produto-frango.png" alt="Frango com Catupiry" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div class="pc-body">
           <span class="pnum">01</span>
@@ -318,7 +318,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 
       <div class="pc rv" style="background:#2A2419">
         <div class="pc-photo pf-palmito">
-          <img src="https://drive.google.com/uc?export=view&id=1MyRvE135npSr9qTrtBoyxD1HOuhhjKPw" alt="Palmito" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <img src="images/produto-palmito.png" alt="Palmito" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div class="pc-body">
           <span class="pnum">02</span>
@@ -341,7 +341,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 
       <div class="pc rv">
         <div class="pc-photo pf-camarao">
-          <img src="https://drive.google.com/uc?export=view&id=1KIf0xb-Gbs62gMXLEqypt9WAW_z3ff4i" alt="Camarão" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <img src="images/produto-camarao.png" alt="Camarão" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div class="pc-body">
           <span class="pnum">03</span>
@@ -624,10 +624,6 @@ function sub(){
   document.getElementById('lf').style.display='none';
   document.getElementById('fsuc').style.display='block';
 }
-document.querySelectorAll('img[src*="drive.google.com"]').forEach(img=>{
-  const id=img.src.split('id=')[1];
-  if(id) img.src=`https://lh3.googleusercontent.com/d/${id}`;
-});
 </script>
 </body>
 </html>

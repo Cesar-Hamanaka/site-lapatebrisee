@@ -199,7 +199,6 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
     <svg width="42" height="42"><use href="#lpb"/></svg>
     <div class="nl-brand">
       <span class="nl-name">La pâte brisée</span>
-      <span class="nl-sub">du Chef Caio Hamanaka</span>
     </div>
   </a>
   <ul class="nls">
@@ -215,7 +214,6 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
   <div class="hc">
     <svg class="hmono" width="96" height="96"><use href="#lpb"/></svg>
     <h1 class="hbn">La pâte brisée</h1>
-    <p class="hcn">du Chef Caio Hamanaka</p>
     <div class="hdiv"></div>
     <p class="hsub">Tortas Artesanais</p>
     <p class="htag">A arte da pâtisserie parisiense na sua mesa. Massa podre artesanal, ingredientes selecionados e o cuidado de um chef gastrônomo.</p>
@@ -240,11 +238,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
       <p class="sb" style="margin-top:16px">Uma marca criada para valorizar aquilo que muitas vezes passa despercebido: o tempo de preparo, a escolha dos ingredientes, a textura perfeita da massa e o cuidado presente em cada etapa.</p>
       <p class="sb" style="margin-top:16px">Inspiradas pela tradição das massas artesanais e pelas memórias construídas em torno da mesa, nossas tortas são feitas para transformar momentos simples em ocasiões especiais.</p>
       <p class="sb" style="margin-top:24px;font-style:italic;color:var(--dk)">Porque acreditamos que as melhores receitas não são apenas preparadas.<br><span style="font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,21px);font-weight:400;font-style:normal;color:var(--gd)">Elas são lembradas.</span></p>
-      <div class="stats">
-        <div><div class="stat-n">3</div><div class="stat-l">Sabores</div></div>
-        <div><div class="stat-n">3</div><div class="stat-l">Tamanhos</div></div>
-        <div><div class="stat-n">∞</div><div class="stat-l">Cuidado</div></div>
-      </div>
+
     </div>
     <div class="hvis rv">
       <div class="hvm">
@@ -570,7 +564,6 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
         <svg width="36" height="36"><use href="#lpb"/></svg>
         <div class="ft-brand">
           <span class="ft-name">La pâte brisée</span>
-          <span class="ft-sig">du Chef Caio Hamanaka</span>
         </div>
       </div>
       <p class="fttl">Tortas Artesanais · São Paulo</p>
@@ -618,11 +611,43 @@ let cur=0;
 const sls=document.querySelectorAll('.dps'),dts=document.querySelectorAll('.dpdt');
 function gts(n){sls[cur].classList.remove('act');dts[cur].classList.remove('act');cur=n;sls[cur].classList.add('act');dts[cur].classList.add('act');}
 setInterval(()=>gts((cur+1)%sls.length),5200);
-function sub(){
-  const n=document.getElementById('ln').value.trim(),e=document.getElementById('le').value.trim();
+async function sub(){
+  const n=document.getElementById('ln').value.trim();
+  const e=document.getElementById('le').value.trim();
+  const w=document.getElementById('lw').value.trim();
   if(!n||!e){alert('Por favor, preencha seu nome e e-mail.');return;}
-  document.getElementById('lf').style.display='none';
-  document.getElementById('fsuc').style.display='block';
+  const btn=document.querySelector('.fb');
+  const orig=btn.textContent;
+  btn.textContent='Enviando...';
+  btn.disabled=true;
+  try{
+    const r=await fetch('https://api.brevo.com/v3/contacts',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
+      body:JSON.stringify({
+        email:e,
+        attributes:{FIRSTNAME:n,...(w&&{WHATSAPP:w})},
+        listIds:[3],
+        updateEnabled:true
+      })
+    });
+    if(r.ok||r.status===204){
+      document.getElementById('lf').style.display='none';
+      document.getElementById('fsuc').style.display='block';
+    } else {
+      const err=await r.json().catch(()=>({}));
+      if(err.code==='duplicate_parameter'){
+        document.getElementById('lf').style.display='none';
+        document.getElementById('fsuc').style.display='block';
+      } else {
+        alert('Erro ao cadastrar. Tente novamente.');
+        btn.textContent=orig;btn.disabled=false;
+      }
+    }
+  }catch(e){
+    alert('Erro de conexão. Verifique sua internet e tente novamente.');
+    btn.textContent=orig;btn.disabled=false;
+  }
 }
 </script>
 </body>

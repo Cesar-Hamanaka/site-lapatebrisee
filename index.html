@@ -93,7 +93,6 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .pf-camarao{background:linear-gradient(160deg,#D4905A 20%,#9A5030 100%)}
 .pc-body{padding:36px 38px 44px}
 .pnum{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(167,116,54,.11);line-height:1;margin-bottom:18px;display:block}
-.pico{display:block;margin-bottom:18px}
 .pnm{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--wh);line-height:1.2;margin-bottom:14px}
 .pdiv{width:22px;height:1px;background:var(--gd);margin-bottom:14px}
 .pdsc{font-size:12px;font-weight:300;line-height:1.85;color:rgba(253,250,244,.5);margin-bottom:28px}
@@ -170,6 +169,10 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
 .ftbt{background:#0C0A05;padding:22px 64px;display:flex;justify-content:space-between;align-items:center}
 .ftbtt{font-size:10px;font-weight:300;color:rgba(253,250,244,.22)}
 
+.tsz{background:var(--cr);text-align:center}
+.tsz-svg-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tsz-svg{min-width:480px;width:100%;max-width:680px;margin:0 auto;display:block}
+
 @keyframes fi{to{opacity:1}}
 @keyframes fiu{to{opacity:1;transform:translateY(0)}}
 @keyframes fisc{to{opacity:1;transform:scale(1)}}
@@ -214,7 +217,6 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
   <ul class="nls">
     <li><a href="#historia">História</a></li>
     <li><a href="#produtos">Tortas</a></li>
-    <li><a href="#fundadores">Fundadores</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a href="#contato" class="ncta">Faça seu pedido</a>
@@ -263,37 +265,6 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
   </div>
 </section>
 
-<section id="fundadores" class="sec fund">
-  <div style="max-width:1140px;margin:0 auto" class="tc rv">
-    <span class="ey">Les Fondateurs</span>
-    <h2 class="st">As pessoas por trás<br>de cada <em>torta</em></h2>
-    <div class="sdiv"></div>
-    <p class="sb">Dois irmãos, duas expertises, uma única missão: entregar o melhor da gastronomia artesanal para a sua mesa.</p>
-  </div>
-  <div class="fundg">
-    <div class="fcard rv">
-      <div class="fph fph-cesar">
-        <img src="images/fundador-cesar.png" alt="Cesar Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center">
-      </div>
-      <div class="frl">Co-fundador</div>
-      <div class="fnm">Cesar Hamanaka</div>
-      <div class="fdl"></div>
-      <p class="fbio">Com trajetória construída no universo das startups, Cesar traz o rigor estratégico que transforma uma paixão em negócio. Por trás de cada detalhe da marca, do posicionamento ao design, das operações ao relacionamento com o cliente, está sua visão de que excelência não é detalhe, é fundamento.</p>
-      <div class="ftags"><span class="ftag">Estratégia</span><span class="ftag">Marketing</span><span class="ftag">Design</span><span class="ftag">Operações</span><span class="ftag">Finanças</span><span class="ftag">Produto</span><span class="ftag">Customer Success</span></div>
-    </div>
-    <div class="fcard rv">
-      <div class="fph fph-caio">
-        <img src="images/fundador-caio.png" alt="Caio Hamanaka" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center">
-      </div>
-      <div class="frl">Chef &amp; Co-fundador</div>
-      <div class="fnm">Caio Hamanaka</div>
-      <div class="fdl"></div>
-      <p class="fbio">Formado em Gastronomia, Caio desenvolveu sua sensibilidade culinária ao longo de anos de estudo e prática dedicada. É ele quem transforma ingredientes cuidadosamente selecionados em tortas de massa podre com personalidade própria, receitas que respeitam a técnica clássica francesa e elevam o sabor a uma experiência memorável.</p>
-      <div class="ftags"><span class="ftag">Gastronomia</span><span class="ftag">Pâtisserie</span><span class="ftag">Culinária Francesa</span><span class="ftag">Chef</span></div>
-    </div>
-  </div>
-</section>
-
 <section id="produtos" class="sec prd">
   <div style="max-width:1160px;margin:0 auto">
     <div class="tc rv">
@@ -309,14 +280,6 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">01</span>
-          <!-- Coxa de frango / drumstick -->
-          <svg class="pico" width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M34 7 Q46 13 45 27 Q44 39 33 43 Q22 47 15 38 Q8 29 14 19 Q19 9 30 7 Q32 6 34 7Z"/>
-            <line x1="15" y1="40" x2="4" y2="49"/>
-            <circle cx="3.5" cy="49" r="3.5"/>
-            <circle cx="15" cy="40" r="2.5"/>
-            <path d="M22 13 Q32 11 37 21" stroke-width="0.8"/>
-          </svg>
           <h3 class="pnm">Frango<br>Catupiry<span style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:.42em;vertical-align:super;letter-spacing:0">®</span></h3>
           <div class="pdiv"></div>
           <p class="pdsc">Peito de frango cuidadosamente preparado, envolvido por um recheio cremoso e equilibrado, finalizado com Catupiry<span style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:.75em;vertical-align:super;letter-spacing:0">®</span> original e nossa tradicional massa artesanal.</p>
@@ -330,16 +293,6 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">02</span>
-          <svg class="pico" width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M28 52 Q26 40 28 28"/>
-            <path d="M28 28 Q17 21 9 26 Q13 20 20 18"/>
-            <path d="M28 28 Q19 14 13 16 Q16 11 22 10"/>
-            <path d="M28 28 Q39 21 47 26 Q43 20 36 18"/>
-            <path d="M28 28 Q37 14 43 16 Q40 11 34 10"/>
-            <path d="M28 28 Q28 17 28 10"/>
-            <path d="M27 39 Q25 36 28 34 Q31 36 29 39"/>
-            <path d="M27 47 Q25 44 28 42 Q31 44 29 47"/>
-          </svg>
           <h3 class="pnm">Palmito<br>Aurore</h3>
           <div class="pdiv"></div>
           <p class="pdsc">Combinação delicada de palmito selecionado e molho cremoso preparado artesanalmente, resultando em uma torta leve, elegante e extremamente reconfortante.</p>
@@ -353,21 +306,51 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">03</span>
-          <svg class="pico" width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M11 44 Q5 32 9 21 Q15 9 28 8 Q42 8 44 19 Q46 30 37 35 Q28 40 22 33"/>
-            <circle cx="41" cy="18" r="5"/>
-            <circle cx="42" cy="16.5" r="1.3" fill="#a77436"/>
-            <path d="M44 14 L49 9"/><path d="M45 13 L51 11"/>
-            <path d="M11 44 L7 49 L11 51"/><path d="M11 44 L12 51"/><path d="M11 44 L16 49"/>
-            <path d="M18 38 Q16 36 18 33 Q21 32 22 35" stroke-width="0.9"/>
-            <path d="M25 34 Q24 32 26 29 Q29 28 29 31" stroke-width="0.9"/>
-          </svg>
           <h3 class="pnm">Camarão<br>Cabotiá</h3>
           <div class="pdiv"></div>
           <p class="pdsc">Nossa versão mais sofisticada. Camarões selecionados preparados lentamente para preservar sabor e textura, envolvidos por um recheio cremoso e massa levemente dourada.</p>
           <div class="psz"><span>Petite</span><span>Classique</span><span>Famille</span></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tsz" id="tamanhos">
+  <div class="rv tc">
+    <span class="ey">Nos Tailles</span>
+    <h2 class="st">Tamanhos &amp; Valores</h2>
+    <div class="sdiv"></div>
+    <div class="tsz-svg-wrap">
+      <svg class="tsz-svg" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="110" cy="95" r="46" fill="#C8A06E"/>
+        <path d="M110,95 L138,67 A40,40 0 1,0 150,95 Z" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.8" stroke-linejoin="round"/>
+        <path d="M110,95 L131,74 A30,30 0 1,0 140,95 Z" fill="none" stroke="#C8B898" stroke-width="0.6"/>
+        <circle cx="110" cy="95" r="3" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.6"/>
+        <circle cx="110" cy="95" r="46" fill="none" stroke="#7A5C34" stroke-width="0.8"/>
+        <circle cx="340" cy="95" r="60" fill="#C8A06E"/>
+        <path d="M340,95 L378,58 A53,53 0 1,0 393,95 Z" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.8" stroke-linejoin="round"/>
+        <path d="M340,95 L370,65 A43,43 0 1,0 383,95 Z" fill="none" stroke="#C8B898" stroke-width="0.6"/>
+        <circle cx="340" cy="95" r="3.5" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.6"/>
+        <circle cx="340" cy="95" r="60" fill="none" stroke="#7A5C34" stroke-width="0.8"/>
+        <circle cx="570" cy="95" r="75" fill="#C8A06E"/>
+        <path d="M570,95 L617,48 A67,67 0 1,0 637,95 Z" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.8" stroke-linejoin="round"/>
+        <path d="M570,95 L610,55 A57,57 0 1,0 627,95 Z" fill="none" stroke="#C8B898" stroke-width="0.6"/>
+        <circle cx="570" cy="95" r="4" fill="#E2D8C0" stroke="#7A5C34" stroke-width="0.6"/>
+        <circle cx="570" cy="95" r="75" fill="none" stroke="#7A5C34" stroke-width="0.8"/>
+        <text x="110" y="195" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" letter-spacing="3" fill="var(--dk)">PETITE</text>
+        <text x="110" y="218" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="16" fill="rgba(28,24,16,.5)">&#8960; 15 cm &#183; ~1 kg</text>
+        <line x1="74" y1="230" x2="146" y2="230" stroke="var(--gd)" stroke-width="0.5"/>
+        <text x="110" y="252" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="18" fill="var(--dk)">R$ 179 &#8212; R$ 205</text>
+        <text x="340" y="195" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" letter-spacing="3" fill="var(--dk)">CLASSIQUE</text>
+        <text x="340" y="218" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="16" fill="rgba(28,24,16,.5)">&#8960; 20 cm &#183; ~1,5 kg</text>
+        <line x1="296" y1="230" x2="384" y2="230" stroke="var(--gd)" stroke-width="0.5"/>
+        <text x="340" y="252" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="18" fill="var(--dk)">R$ 251 &#8212; R$ 305</text>
+        <text x="570" y="195" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" letter-spacing="3" fill="var(--dk)">FAMILLE</text>
+        <text x="570" y="218" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="16" fill="rgba(28,24,16,.5)">&#8960; 25 cm &#183; ~2,5 kg</text>
+        <line x1="526" y1="230" x2="614" y2="230" stroke="var(--gd)" stroke-width="0.5"/>
+        <text x="570" y="252" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="18" fill="var(--dk)">R$ 395 &#8212; R$ 476</text>
+      </svg>
     </div>
   </div>
 </section>
@@ -613,7 +596,6 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
       <ul class="ftls">
         <li><a href="#historia">Nossa História</a></li>
         <li><a href="#produtos">As Tortas</a></li>
-        <li><a href="#fundadores">Os Fundadores</a></li>
         <li><a href="#valeurs">Nossos Princípios</a></li>
         <li><a href="#contato">Como levar nossas tortas à sua mesa</a></li>
         <li><a href="#newsletter">Newsletter</a></li>

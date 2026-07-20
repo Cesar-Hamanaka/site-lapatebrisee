@@ -4,13 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La pâte brisée | Tortas Artesanais</title>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TLMC78C7P1"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-TLMC78C7P1');</script>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--cr:#EAE3D4;--cr2:#F5F0E8;--cr3:#DDD5C6;--dk:#1C1810;--dk2:#3A3020;--gd:#B8872A;--gd2:#D4A845;--gdp:rgba(184,135,42,.12);--wh:#FDFAF4;}
+:root{--cr:#EAE3D4;--cr2:#F5F0E8;--cr3:#DDD5C6;--dk:#1C1810;--dk2:#3A3020;--gd:#a77436;--gd2:#c08840;--gdp:rgba(167,116,54,.12);--wh:#FDFAF4;}
 @font-face{font-family:'Baskerville';src:url('fonts/Baskerville.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:'Montserrat',sans-serif;background:var(--cr);color:var(--dk);overflow-x:hidden}
@@ -28,11 +25,11 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .ncta:hover{background:var(--gd);color:var(--wh)}
 
 .hero{height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;background:var(--cr);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(184,135,42,.08) 0,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(184,135,42,.06) 0,transparent 50%)}
-.hero::after{content:'';position:absolute;top:88px;left:36px;right:36px;bottom:36px;border:1px solid rgba(184,135,42,.18);pointer-events:none}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(167,116,54,.08) 0,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(167,116,54,.06) 0,transparent 50%)}
+.hero::after{content:'';position:absolute;top:88px;left:36px;right:36px;bottom:36px;border:1px solid rgba(167,116,54,.18);pointer-events:none}
 .hc{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
-.hmono{width:96px;height:96px;margin-bottom:28px;opacity:0;transform:scale(.8);animation:fisc 1s ease .3s forwards}
-.hbn{opacity:0;transform:translateY(18px);animation:fiu 1s ease .6s forwards;width:clamp(240px,40vw,420px);max-width:82vw;height:auto}
+.hmono{width:114px;height:auto;margin-bottom:22px;opacity:0;transform:scale(.8);animation:fisc 1s ease .3s forwards}
+.hbn{opacity:0;transform:translateY(18px);animation:fiu 1s ease .6s forwards;width:clamp(200px,34vw,360px);max-width:82vw;height:auto}
 .hcn{font-family:'Great Vibes',cursive;font-size:clamp(22px,3.5vw,40px);color:var(--gd);margin-top:8px;opacity:0;transform:translateY(14px);animation:fiu 1s ease .9s forwards}
 .hdiv{width:52px;height:1px;background:var(--gd);margin:22px auto;opacity:0;animation:fi 1s ease 1.1s forwards}
 .hsub{font-size:10px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--dk2);opacity:0;animation:fi 1s ease 1.3s forwards}
@@ -62,7 +59,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .hvm{position:absolute;top:0;left:0;right:56px;bottom:56px;background:#C8A870;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .hvm img{width:100%;height:100%;object-fit:cover;object-position:center}
 .hvm-ph{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:rgba(28,24,16,.4);text-align:center;padding:20px}
-.hva{position:absolute;bottom:0;right:0;width:190px;height:190px;background:var(--gdp);border:1px solid rgba(184,135,42,.28);display:flex;align-items:center;justify-content:center}
+.hva{position:absolute;bottom:0;right:0;width:190px;height:190px;background:var(--gdp);border:1px solid rgba(167,116,54,.28);display:flex;align-items:center;justify-content:center}
 .hvt{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--dk2);text-align:center;padding:20px;line-height:1.6}
 .stats{margin-top:44px;display:flex;gap:44px}
 .stat-n{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:400;color:var(--gd);line-height:1}
@@ -95,12 +92,13 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .pf-palmito{background:linear-gradient(160deg,#D4B060 20%,#9A7035 100%)}
 .pf-camarao{background:linear-gradient(160deg,#D4905A 20%,#9A5030 100%)}
 .pc-body{padding:36px 38px 44px}
-.pnum{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(184,135,42,.11);line-height:1;margin-bottom:18px;display:block}
+.pnum{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(167,116,54,.11);line-height:1;margin-bottom:18px;display:block}
+.pico{display:block;margin-bottom:18px}
 .pnm{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--wh);line-height:1.2;margin-bottom:14px}
 .pdiv{width:22px;height:1px;background:var(--gd);margin-bottom:14px}
 .pdsc{font-size:12px;font-weight:300;line-height:1.85;color:rgba(253,250,244,.5);margin-bottom:28px}
 .psz{display:flex;gap:7px;flex-wrap:wrap}
-.psz span{font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gd);border:1px solid rgba(184,135,42,.3);padding:5px 12px}
+.psz span{font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gd);border:1px solid rgba(167,116,54,.3);padding:5px 12px}
 
 .val{background:var(--wh);text-align:center}
 .valg{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 56px;max-width:960px;margin:56px auto 0}
@@ -119,7 +117,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .dpnm{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--dk)}
 .dplc{font-size:11px;font-weight:300;color:var(--dk2)}
 .dpnav{display:flex;justify-content:center;gap:8px;margin-top:44px}
-.dpdt{width:7px;height:7px;border-radius:50%;background:rgba(184,135,42,.22);cursor:pointer;transition:all .3s;border:none;padding:0}
+.dpdt{width:7px;height:7px;border-radius:50%;background:rgba(167,116,54,.22);cursor:pointer;transition:all .3s;border:none;padding:0}
 .dpdt.act{background:var(--gd);transform:scale(1.3)}
 
 /* ── CONTACT: flex cols so map-title aligns with steps-title ── */
@@ -129,23 +127,19 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .ctt .ey{color:var(--gd)}.ctt .st{color:var(--wh)}.ctt .sdiv{background:var(--gd)}.ctt .sb{color:rgba(253,250,244,.5)}
 .cinfo{margin-top:32px;display:flex;flex-direction:column;gap:20px}
 .citem{display:flex;align-items:flex-start;gap:18px}
-.cico{width:42px;height:42px;min-width:42px;border:1px solid rgba(184,135,42,.28);display:flex;align-items:center;justify-content:center}
+.cico{width:42px;height:42px;min-width:42px;border:1px solid rgba(167,116,54,.28);display:flex;align-items:center;justify-content:center}
 .clb{font-size:8px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gd);margin-bottom:4px}
 .cvl{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--wh);line-height:1.5}
-.cpsteps{margin-top:auto;padding-top:36px;display:flex;flex-direction:column;gap:22px}
-.cpsep{width:100%;height:1px;background:rgba(184,135,42,.12);margin-bottom:4px}
+.cpsteps{margin-top:auto;padding-top:36px;display:flex;flex-direction:column;gap:20px}
+.cpsep{width:100%;height:1px;background:rgba(167,116,54,.12);margin-bottom:4px}
 .cpstt-h{font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gd);margin-bottom:16px}
 .cpstep{display:flex;align-items:flex-start;gap:16px}
 .cpn{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gd);opacity:.3;line-height:1;min-width:30px}
 .cpstt{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--wh);margin-bottom:5px}
 .cpstx{font-size:12px;font-weight:300;color:rgba(253,250,244,.45);line-height:1.6}
-.cplist{list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:2px}
-.cplist li{font-size:11px;font-weight:300;color:rgba(253,250,244,.32);padding-left:12px;position:relative}
-.cplist li::before{content:'·';position:absolute;left:0;color:var(--gd);opacity:.55}
 .map-block{margin-top:auto}
 .map-title{font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gd);margin-bottom:14px}
-.map-wrap{border:1px solid rgba(184,135,42,.15);overflow:hidden}
-.map-note{font-size:11px;font-weight:300;color:rgba(253,250,244,.35);line-height:1.6;margin-top:14px;font-style:italic}
+.map-wrap{border:1px solid rgba(167,116,54,.15);overflow:hidden}
 
 .nws{background:var(--cr2);text-align:center}
 .lf{max-width:580px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px}
@@ -156,7 +150,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .fb:hover{background:var(--gd);border-color:var(--gd)}
 .fdis{font-size:10px;color:var(--dk2);opacity:.55;margin-top:6px}
 select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233A3020' opacity='.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;}
-.fsuc{display:none;padding:22px;background:rgba(184,135,42,.1);border:1px solid rgba(184,135,42,.28)}
+.fsuc{display:none;padding:22px;background:rgba(167,116,54,.1);border:1px solid rgba(167,116,54,.28)}
 .fsuc p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--dk)}
 
 .ft{background:#111008;padding:56px 64px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;align-items:start}
@@ -171,7 +165,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
 .ftls a{font-size:12px;font-weight:300;color:rgba(253,250,244,.5);text-decoration:none;transition:color .3s}
 .ftls a:hover{color:var(--gd)}
 .ftsoc{display:flex;gap:10px;margin-top:20px}
-.fts{width:34px;height:34px;border:1px solid rgba(184,135,42,.28);display:flex;align-items:center;justify-content:center;color:rgba(253,250,244,.45);text-decoration:none;font-size:13px;transition:all .3s}
+.fts{width:34px;height:34px;border:1px solid rgba(167,116,54,.28);display:flex;align-items:center;justify-content:center;color:rgba(253,250,244,.45);text-decoration:none;font-size:13px;transition:all .3s}
 .fts:hover{border-color:var(--gd);color:var(--gd)}
 .ftbt{background:#0C0A05;padding:22px 64px;display:flex;justify-content:space-between;align-items:center}
 .ftbtt{font-size:10px;font-weight:300;color:rgba(253,250,244,.22)}
@@ -193,11 +187,11 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
   .ft{grid-template-columns:1fr;gap:32px}.ftbt{flex-direction:column;gap:10px;text-align:center}
 }
 @media(max-width:768px){
-  nav{padding:14px 20px}nav.scr{padding:11px 20px}.nls,.ncta{display:none}
+  nav{padding:14px 20px}nav.scr{padding:11px 20px}.nls{display:none}.ncta{padding:8px 14px;font-size:9px}
   .sec{padding:56px 22px}
   .hero::after{display:none}
-  .hmono{width:72px;height:72px;margin-bottom:14px}
-  .hbn{width:clamp(220px,78vw,380px)}
+  .hmono{width:86px;height:auto;margin-bottom:12px}
+  .hbn{width:clamp(190px,70vw,320px)}
   .hdiv{margin:14px auto}
   .htag{margin-top:24px;max-width:88vw}
   .hbtns{flex-wrap:wrap;justify-content:center;margin-top:28px;gap:12px}
@@ -223,12 +217,16 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     <li><a href="#fundadores">Fundadores</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <a href="#newsletter" class="ncta">Fique por dentro</a>
+  <a href="#contato" class="ncta">Faça seu pedido</a>
 </nav>
 
 <section class="hero" id="home">
   <div class="hc">
-    <svg class="hmono" width="96" height="96"><use href="#lpb"/></svg>
+    <svg class="hmono" viewBox="0 0 166.65 152.63" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#a77436" d="M99.39,118.5l-.86,34.13H0v-3.94h3.42c4.96,0,8.4-.63,10.3-1.88,1.91-1.25,3.14-3.21,3.68-5.86.54-2.65.81-8.82.81-18.52v-56.88c0-9.24-.27-15.2-.81-17.88-.55-2.68-1.68-4.53-3.42-5.56-1.74-1.03-5.55-1.54-11.42-1.54H0v-3.93h55.68v3.93h-5.13c-5.7,0-9.44.47-11.2,1.41-1.77.94-2.95,2.69-3.55,5.26-.6,2.57-.9,8.67-.9,18.31v60.73c0,8.38.23,13.63.69,15.74.46,2.11,1.7,3.75,3.72,4.92,2.02,1.17,6.37,1.75,13.04,1.75h8.81c7.12,0,12.41-.63,15.87-1.88,3.45-1.25,6.73-3.99,9.84-8.21,3.11-4.22,5.95-10.92,8.51-20.1h4.02Z"/>
+      <path fill="#a77436" d="M72.07,0h2.31c.97,3.2,1.46,7.04,1.46,11.55,3.65-3.88,7.57-6.77,11.76-8.68,4.19-1.91,8.62-2.87,13.3-2.87,9.69,0,17.76,3.41,24.21,10.22,6.44,6.82,9.67,15.81,9.67,26.99s-3.24,20.1-9.71,27.46c-6.47,7.36-14.98,11.03-25.53,11.03-4.33,0-8.48-.87-12.45-2.61-3.96-1.74-7.71-4.32-11.25-7.74v26.6c0,8.1.16,13.03.47,14.8.31,1.77,1.21,3.09,2.69,3.98,1.48.88,4.25,1.33,8.3,1.33v3.93h-36.61v-3.93h2.57c4.05,0,6.68-.59,7.91-1.76,1.23-1.17,1.94-2.57,2.14-4.19.2-1.62.3-6.34.3-14.16V28.31c0-7.47-.1-12.17-.3-14.11-.2-1.94-1.01-3.42-2.44-4.45-1.43-1.03-3.97-1.54-7.61-1.54h-2.57v-3.93c5.65-.57,12.77-2,21.38-4.28ZM75.83,59.7c3.08,3.76,6.34,6.6,9.8,8.51,3.45,1.91,7.08,2.87,10.91,2.87,6.44,0,12.06-2.77,16.85-8.3,4.79-5.53,7.18-14.34,7.18-26.43,0-10.49-2.31-18.34-6.93-23.52-4.62-5.19-10.12-7.78-16.51-7.78-3.93,0-7.67,1-11.21,2.99-3.54,2-6.9,5.02-10.09,9.07v42.6Z"/>
+      <path fill="#a77436" d="M98.57,152.63h-3.34V58.89c0-6.84-.19-11.26-.56-13.26-.37-2-1.31-3.48-2.82-4.45s-4.15-1.46-7.91-1.46v-3.94c3.36,0,7.41-.4,12.14-1.19,4.73-.8,7.95-1.6,9.67-2.4h1.8v55.43c3.99-3.59,8.04-6.27,12.14-8.04,4.11-1.76,8.27-2.65,12.49-2.65,10.09,0,18.36,3.51,24.8,10.52,6.44,7.01,9.67,15.97,9.67,26.86s-3.31,20.07-9.92,27.37c-6.62,7.3-15.2,10.95-25.74,10.95-5.19,0-9.74-1.08-13.64-3.25-3.91-2.17-7.17-5.39-9.79-9.66-3.71,3.7-6.7,8.01-8.98,12.91ZM107.55,92.67v27.46c0,7.07.47,12.16,1.41,15.27.94,3.11,3.21,6.09,6.8,8.94,3.59,2.85,7.78,4.27,12.57,4.27,7.35,0,13.22-3.02,17.58-9.07,4.36-6.04,6.54-14.74,6.54-26.09,0-10.43-2.04-18.38-6.12-23.82-4.08-5.44-9.51-8.17-16.29-8.17-3.88,0-7.68.93-11.42,2.78-3.73,1.85-7.43,4.66-11.07,8.42Z"/>
+    </svg>
     <svg class="hbn" role="img" aria-label="La pâte brisée" viewBox="232 261 376 76"><g fill="var(--dk)"><path d="M274.74,299.09l-.32,12.85h-37.09v-1.48h1.29c1.87,0,3.16-.24,3.88-.71s1.18-1.21,1.38-2.21.31-3.32.31-6.97v-21.41c0-3.48-.1-5.72-.31-6.73s-.63-1.71-1.29-2.09-2.09-.58-4.3-.58h-.97v-1.48h20.96v1.48h-1.93c-2.15,0-3.55.18-4.22.53s-1.11,1.01-1.34,1.98c-.23.97-.34,3.26-.34,6.89v22.86c0,3.16.09,5.13.26,5.92s.64,1.41,1.4,1.85,2.4.66,4.91.66h3.32c2.68,0,4.67-.24,5.97-.71s2.53-1.5,3.7-3.09,2.24-4.11,3.2-7.57h1.51Z"/><path d="M304.33,307.11h1.19c-.19,3.67-2,5.51-5.41,5.51-1.46,0-2.61-.39-3.46-1.16s-1.4-1.92-1.66-3.44c-2.15,1.52-4.1,2.67-5.88,3.44s-3.35,1.16-4.75,1.16c-1.78,0-3.32-.52-4.6-1.55s-1.93-2.39-1.93-4.09c0-2.21,1.08-4.14,3.24-5.8,2.16-1.65,5.14-3.26,8.93-4.83l4.99-2.03v-1.29c0-1.82-.12-3.14-.35-3.96s-.85-1.55-1.84-2.19-2.29-.97-3.9-.97c-3.22,0-5.01,1.07-5.38,3.22-.34,2.19-1.24,3.28-2.7,3.28-1.31,0-1.96-.62-1.96-1.87s.87-2.54,2.61-3.94,4.44-2.11,8.11-2.11c2.73,0,4.84.43,6.34,1.29s2.5,1.84,2.98,2.93.72,2.77.72,5.02v10.66c0,2.49.13,4.09.39,4.8s.82,1.06,1.67,1.06c1.42,0,2.3-1.05,2.64-3.16ZM294.99,295.84l-3.51,1.42c-5.54,2.25-8.31,5.09-8.31,8.5,0,1.35.35,2.44,1.06,3.27s1.63,1.24,2.77,1.24c1.01,0,2.18-.33,3.51-1s2.82-1.66,4.48-2.99v-10.43Z"/><path d="M330.83,284.5h.87c.36,1.2.55,2.65.55,4.35,1.37-1.46,2.85-2.55,4.43-3.27s3.25-1.08,5.01-1.08c3.65,0,6.69,1.28,9.11,3.85,2.43,2.56,3.64,5.95,3.64,10.16s-1.22,7.57-3.65,10.33-5.64,4.15-9.61,4.15c-1.63,0-3.19-.33-4.68-.98s-2.9-1.63-4.23-2.91v10.01c0,3.05.06,4.9.18,5.57s.46,1.16,1.01,1.5,1.6.5,3.12.5v1.48h-13.78v-1.48h.97c1.52,0,2.52-.22,2.98-.66s.73-.97.8-1.58.11-2.39.11-5.33v-23.95c0-2.81-.04-4.58-.11-5.31s-.38-1.29-.92-1.67-1.49-.58-2.87-.58h-.97v-1.48c2.12-.21,4.81-.75,8.05-1.61ZM332.24,306.98c1.16,1.42,2.39,2.48,3.69,3.2s2.67,1.08,4.1,1.08c2.43,0,4.54-1.04,6.34-3.12s2.7-5.4,2.7-9.95c0-3.95-.87-6.9-2.61-8.85-1.74-1.95-3.81-2.93-6.21-2.93-1.48,0-2.89.38-4.22,1.13s-2.6,1.89-3.8,3.41v16.03Z"/><path d="M386.08,307.11h1.19c-.19,3.67-2,5.51-5.41,5.51-1.46,0-2.61-.39-3.46-1.16s-1.4-1.92-1.66-3.44c-2.15,1.52-4.1,2.67-5.88,3.44s-3.35,1.16-4.75,1.16c-1.78,0-3.32-.52-4.6-1.55-1.29-1.03-1.93-2.39-1.93-4.09,0-2.21,1.08-4.14,3.24-5.8,2.16-1.65,5.14-3.26,8.93-4.83l4.99-2.03v-1.29c0-1.82-.12-3.14-.35-3.96s-.85-1.55-1.84-2.19-2.29-.97-3.9-.97c-3.22,0-5.01,1.07-5.38,3.22-.34,2.19-1.24,3.28-2.7,3.28-1.31,0-1.96-.62-1.96-1.87s.87-2.54,2.61-3.94c1.74-1.41,4.44-2.11,8.11-2.11,2.73,0,4.84.43,6.34,1.29s2.5,1.84,2.98,2.93.72,2.77.72,5.02v10.66c0,2.49.13,4.09.39,4.8s.82,1.06,1.67,1.06c1.42,0,2.3-1.05,2.64-3.16ZM370.14,268.41h3.25l5.05,9.01c.54.94.8,1.52.8,1.74,0,.28-.12.42-.35.42-.26,0-.76-.36-1.51-1.09l-6.28-5.83-5.02,5.99c-.6.71-1.01,1.06-1.22,1.06-.24,0-.35-.16-.35-.48,0-.24.2-.74.61-1.51l5.02-9.3ZM376.74,295.84l-3.51,1.42c-5.54,2.25-8.31,5.09-8.31,8.5,0,1.35.35,2.44,1.06,3.27s1.63,1.24,2.77,1.24c1.01,0,2.18-.33,3.51-1s2.82-1.66,4.48-2.99v-10.43Z"/><path d="M406.04,287.05h-7.95v15.94c0,2.45.11,4.09.32,4.94s.67,1.53,1.37,2.04,1.44.77,2.24.77c1.55,0,2.89-.88,4.02-2.64l1.03.61c-.67,1.42-1.65,2.48-2.95,3.2s-2.61,1.08-3.94,1.08c-1.55,0-2.9-.46-4.07-1.37s-1.9-1.98-2.19-3.2-.43-3.37-.43-6.44v-14.94h-3.83v-1.48c1.76-.04,3.34-.78,4.73-2.22s2.29-3.46,2.67-6.05h1.03v8.27h7.95v1.48Z"/><path d="M433.5,294.48h-18.38c-.09,1.27-.13,2.21-.13,2.83,0,4.64.72,8.12,2.17,10.45s3.61,3.49,6.49,3.49c3.91,0,6.68-1.75,8.31-5.25h1.55c-.69,2.19-2.05,3.9-4.09,5.14s-4.26,1.85-6.66,1.85c-2.23,0-4.34-.56-6.33-1.69s-3.61-2.72-4.88-4.78c-1.27-2.06-1.9-4.56-1.9-7.5,0-4.16,1.22-7.62,3.67-10.38s5.51-4.14,9.18-4.14c3.46,0,6.13,1.05,8.02,3.16,1.89,2.1,2.89,4.38,2.99,6.83ZM427.87,293.2c.06-.49.1-.93.1-1.32,0-1.89-.55-3.35-1.66-4.39s-2.46-1.56-4.07-1.56c-3.91,0-6.24,2.43-6.99,7.28h12.62Z"/><path d="M458.84,313h-1.26v-35.29c0-2.58-.07-4.24-.21-4.99s-.49-1.31-1.06-1.67-1.56-.55-2.98-.55v-1.48c1.27,0,2.79-.15,4.57-.45s2.99-.6,3.64-.9h.68v20.86c1.5-1.35,3.03-2.36,4.57-3.03s3.11-1,4.7-1c3.8,0,6.91,1.32,9.34,3.96,2.43,2.64,3.64,6.01,3.64,10.11s-1.24,7.56-3.73,10.3-5.72,4.12-9.69,4.12c-1.95,0-3.66-.41-5.14-1.22s-2.7-2.03-3.69-3.64c-1.4,1.4-2.52,3.02-3.38,4.86ZM462.22,290.43v10.33c0,2.66.18,4.58.53,5.75.35,1.17,1.21,2.29,2.56,3.36s2.93,1.61,4.73,1.61c2.77,0,4.97-1.14,6.62-3.41s2.46-5.55,2.46-9.82c0-3.93-.77-6.92-2.3-8.97-1.53-2.05-3.58-3.07-6.13-3.07-1.46,0-2.89.35-4.3,1.05s-2.8,1.75-4.17,3.17Z"/><path d="M497.83,291.23c.73-1.91,1.92-3.51,3.56-4.8s3.25-1.93,4.81-1.93c1.42,0,2.53.44,3.35,1.32s1.22,1.78,1.22,2.7c0,.62-.21,1.16-.63,1.61s-.93.68-1.53.68c-1.07,0-1.89-.79-2.45-2.38-.39-1.07-.97-1.61-1.74-1.61-.92,0-2.03.63-3.32,1.88s-2.11,2.56-2.48,3.91c-.36,1.35-.55,3.21-.55,5.57v4.7c0,2.81.04,4.58.11,5.31s.38,1.29.92,1.67,1.49.58,2.87.58h.9v1.48h-14.01v-1.48h.68c1.29,0,2.21-.18,2.75-.53s.87-.85.98-1.5.16-2.49.16-5.54v-7.44c0-2.83-.04-4.61-.11-5.33-.08-.72-.38-1.28-.92-1.67s-1.49-.6-2.87-.6h-.68v-1.45c2.02-.24,4.66-.87,7.92-1.9.62,1.7.97,3.94,1.03,6.73Z"/><path d="M521.52,284.5v18.38c0,2.81.04,4.58.13,5.31s.4,1.29.93,1.67,1.49.58,2.87.58h.68v1.48h-14.2v-1.48h1.09c1.52,0,2.52-.22,2.98-.66s.73-.97.8-1.58.11-2.39.11-5.33v-7.98c0-3.09-.14-4.98-.43-5.67s-.68-1.12-1.16-1.29-1.33-.26-2.53-.26h-.87v-1.48c3.82-.39,6.78-.96,8.89-1.71h.71ZM515.31,271.05c0-.92.33-1.72.98-2.38s1.44-1,2.37-1,1.71.33,2.35,1c.64.67.97,1.46.97,2.38s-.32,1.75-.97,2.41-1.43,1-2.35,1-1.71-.33-2.37-1-.98-1.47-.98-2.41Z"/><path d="M530.05,312.77v-8.66h1.26c1.46,5,4.07,7.5,7.82,7.5,1.63,0,2.85-.49,3.65-1.48s1.21-2.07,1.21-3.25c0-1.37-.43-2.5-1.29-3.38-.88-.88-2.59-1.94-5.12-3.19-2.66-1.31-4.57-2.6-5.73-3.86-1.16-1.24-1.74-2.78-1.74-4.6s.62-3.4,1.87-4.97,2.99-2.37,5.25-2.37,4.2.93,5.7,2.8c.32-.32.74-1.11,1.26-2.35h1.19v8.15h-1.19c-.43-1.95-1.26-3.63-2.5-5.04-1.23-1.41-2.69-2.11-4.36-2.11-1.29,0-2.33.4-3.12,1.19-.79.79-1.19,1.72-1.19,2.77,0,1.16.44,2.16,1.32,2.99.86.86,2.5,1.84,4.93,2.93,3.65,1.65,5.88,3.26,6.7,4.83.82,1.59,1.22,3.11,1.22,4.57,0,2.3-.76,4.16-2.27,5.6s-3.42,2.16-5.71,2.16c-2.43,0-4.58-1-6.47-2.99-.58.64-1.05,1.57-1.42,2.77h-1.26Z"/><path d="M575.71,294.48h-18.38c-.09,1.27-.13,2.21-.13,2.83,0,4.64.72,8.12,2.17,10.45,1.45,2.33,3.61,3.49,6.49,3.49,3.91,0,6.68-1.75,8.31-5.25h1.55c-.69,2.19-2.05,3.9-4.09,5.14s-4.26,1.85-6.66,1.85c-2.23,0-4.34-.56-6.33-1.69s-3.61-2.72-4.88-4.78c-1.27-2.06-1.9-4.56-1.9-7.5,0-4.16,1.22-7.62,3.67-10.38,2.45-2.76,5.51-4.14,9.18-4.14,3.46,0,6.13,1.05,8.02,3.16,1.89,2.1,2.89,4.38,2.99,6.83ZM570.07,293.2c.06-.49.1-.93.1-1.32,0-1.89-.55-3.35-1.66-4.39-1.11-1.04-2.46-1.56-4.07-1.56-3.91,0-6.24,2.43-6.99,7.28h12.62ZM560.51,279.67h-1.06l4.83-7.5c.99-1.55,1.77-2.58,2.33-3.11s1.21-.79,1.92-.79c.62,0,1.11.19,1.45.56s.52.78.52,1.21c0,.58-.23,1.14-.69,1.67s-1.93,1.84-4.39,3.9l-4.89,4.06Z"/><path d="M604.55,294.48h-18.38c-.09,1.27-.13,2.21-.13,2.83,0,4.64.72,8.12,2.17,10.45,1.45,2.33,3.61,3.49,6.49,3.49,3.91,0,6.68-1.75,8.31-5.25h1.55c-.69,2.19-2.05,3.9-4.09,5.14s-4.26,1.85-6.66,1.85c-2.23,0-4.34-.56-6.33-1.69s-3.61-2.72-4.88-4.78c-1.27-2.06-1.9-4.56-1.9-7.5,0-4.16,1.22-7.62,3.67-10.38,2.45-2.76,5.51-4.14,9.18-4.14,3.46,0,6.13,1.05,8.02,3.16s2.89,4.38,2.99,6.83ZM598.92,293.2c.06-.49.1-.93.1-1.32,0-1.89-.55-3.35-1.66-4.39s-2.46-1.56-4.07-1.56c-3.91,0-6.24,2.43-6.99,7.28h12.62Z"/></g></svg>
     <div class="hdiv"></div>
     <p class="hsub">Tortas Artesanais</p>
@@ -311,9 +309,17 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">01</span>
+          <!-- Coxa de frango / drumstick -->
+          <svg class="pico" width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M34 7 Q46 13 45 27 Q44 39 33 43 Q22 47 15 38 Q8 29 14 19 Q19 9 30 7 Q32 6 34 7Z"/>
+            <line x1="15" y1="40" x2="4" y2="49"/>
+            <circle cx="3.5" cy="49" r="3.5"/>
+            <circle cx="15" cy="40" r="2.5"/>
+            <path d="M22 13 Q32 11 37 21" stroke-width="0.8"/>
+          </svg>
           <h3 class="pnm">Frango<br>Catupiry<span style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:.42em;vertical-align:super;letter-spacing:0">®</span></h3>
           <div class="pdiv"></div>
-          <p class="pdsc">Nossa interpretação do clássico brasileiro, preparada com peito de frango desfiado em um recheio cremoso e equilibrado com o autêntico Catupiry<span style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:.75em;vertical-align:super;letter-spacing:0">®</span>.</p>
+          <p class="pdsc">Peito de frango cuidadosamente preparado, envolvido por um recheio cremoso e equilibrado, finalizado com Catupiry<span style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:.75em;vertical-align:super;letter-spacing:0">®</span> original e nossa tradicional massa artesanal.</p>
           <div class="psz"><span>Petite</span><span>Classique</span><span>Famille</span></div>
         </div>
       </div>
@@ -324,9 +330,19 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">02</span>
+          <svg class="pico" width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 52 Q26 40 28 28"/>
+            <path d="M28 28 Q17 21 9 26 Q13 20 20 18"/>
+            <path d="M28 28 Q19 14 13 16 Q16 11 22 10"/>
+            <path d="M28 28 Q39 21 47 26 Q43 20 36 18"/>
+            <path d="M28 28 Q37 14 43 16 Q40 11 34 10"/>
+            <path d="M28 28 Q28 17 28 10"/>
+            <path d="M27 39 Q25 36 28 34 Q31 36 29 39"/>
+            <path d="M27 47 Q25 44 28 42 Q31 44 29 47"/>
+          </svg>
           <h3 class="pnm">Palmito<br>Aurore</h3>
           <div class="pdiv"></div>
-          <p class="pdsc">Combinação delicada de palmito selecionado e molho Aurore preparado artesanalmente, resultando em uma torta leve, elegante e reconfortante.</p>
+          <p class="pdsc">Combinação delicada de palmito selecionado e molho cremoso preparado artesanalmente, resultando em uma torta leve, elegante e extremamente reconfortante.</p>
           <div class="psz"><span>Petite</span><span>Classique</span><span>Famille</span></div>
         </div>
       </div>
@@ -337,9 +353,18 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         </div>
         <div class="pc-body">
           <span class="pnum">03</span>
+          <svg class="pico" width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 44 Q5 32 9 21 Q15 9 28 8 Q42 8 44 19 Q46 30 37 35 Q28 40 22 33"/>
+            <circle cx="41" cy="18" r="5"/>
+            <circle cx="42" cy="16.5" r="1.3" fill="#a77436"/>
+            <path d="M44 14 L49 9"/><path d="M45 13 L51 11"/>
+            <path d="M11 44 L7 49 L11 51"/><path d="M11 44 L12 51"/><path d="M11 44 L16 49"/>
+            <path d="M18 38 Q16 36 18 33 Q21 32 22 35" stroke-width="0.9"/>
+            <path d="M25 34 Q24 32 26 29 Q29 28 29 31" stroke-width="0.9"/>
+          </svg>
           <h3 class="pnm">Camarão<br>Cabotiá</h3>
           <div class="pdiv"></div>
-          <p class="pdsc">O equilíbrio entre a intensidade do camarão e a doçura natural da abóbora cabotiá, em uma receita inspirada na cozinha contemporânea.</p>
+          <p class="pdsc">Nossa versão mais sofisticada. Camarões selecionados preparados lentamente para preservar sabor e textura, envolvidos por um recheio cremoso e massa levemente dourada.</p>
           <div class="psz"><span>Petite</span><span>Classique</span><span>Famille</span></div>
         </div>
       </div>
@@ -356,7 +381,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
   <div class="valg">
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M13 22 Q26 18 39 22 L39 30 Q26 34 13 30 Z"/>
           <path d="M6 22 L13 22 M6 30 L13 30"/><path d="M6 22 Q4 26 6 30"/>
           <path d="M39 22 L46 22 M39 30 L46 30"/><path d="M46 22 Q48 26 46 30"/>
@@ -368,7 +393,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     </div>
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M26 40 Q12 28 16 12 Q32 6 40 18 Q44 30 26 40Z"/>
           <path d="M26 40 L26 46"/><path d="M20 23 Q23 27 26 34"/>
         </svg>
@@ -377,7 +402,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     </div>
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="17" cy="30" r="8"/><circle cx="35" cy="30" r="8"/><circle cx="26" cy="17" r="8"/>
         </svg>
       </div>
@@ -385,7 +410,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     </div>
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="26" cy="19" r="11"/>
           <path d="M19 29 L14 42"/><path d="M33 29 L38 42"/>
           <path d="M14 42 L20 38 L26 42 L32 38 L38 42"/>
@@ -396,7 +421,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     </div>
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <rect x="8" y="14" width="36" height="30" rx="2"/>
           <path d="M8 23 L44 23"/><path d="M18 10 L18 18"/><path d="M34 10 L34 18"/>
           <path d="M15 31 L19 31"/><path d="M24 31 L28 31"/><path d="M33 31 L37 31"/>
@@ -409,7 +434,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     </div>
     <div class="vitem rv">
       <div class="vico">
-        <svg width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#B8872A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="52" height="52" viewBox="0 0 56 56" fill="none" stroke="#a77436" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="36" r="7"/><path d="M11 29 L11 36"/><path d="M4 40 L11 36"/>
           <circle cx="28" cy="33" r="10"/><path d="M28 23 L28 33"/><path d="M18 39 L28 33"/>
           <circle cx="47" cy="30" r="13"/><path d="M47 17 L47 30"/><path d="M34 37 L47 30"/>
@@ -461,38 +486,29 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
         <p class="sb">Cada torta é preparada sob encomenda, respeitando o tempo necessário para garantir a qualidade que faz parte da nossa história.<br><br>Pelo WhatsApp, você poderá realizar seu pedido, combinar a retirada ou entrega e esclarecer qualquer dúvida.</p>
         <div class="cinfo">
           <div class="citem">
-            <div class="cico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B8872A" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-            <div><div class="clb">WhatsApp</div>            <a href="https://wa.me/5511912802740" target="_blank" rel="noopener noreferrer" style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:500;color:var(--wh);letter-spacing:.5px;text-decoration:none">+55 11 91280-2740</a></div>
+            <div class="cico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a77436" stroke-width="1.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div><div class="clb">WhatsApp</div>            <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:500;color:var(--wh);letter-spacing:.5px">+55 11 91280-2740</div></div>
           </div>
           <div class="citem">
-            <div class="cico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B8872A" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="cico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#a77436" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div><div class="clb">Retirada</div>            <div class="cvl">Moema</div></div>
           </div>
         </div>
       </div>
       <div class="cpsteps">
         <div class="cpsep"></div>
-        <p class="cpstt-h">Como encomendar sua torta</p>
+        <p class="cpstt-h">Como fazer seu pedido</p>
         <div class="cpstep">
           <div class="cpn">1</div>
-          <div>
-            <div class="cpstt">Escolha sua torta</div>
-            <div class="cpstx">Informe a data em que deseja receber sua torta, além do sabor e do tamanho. Como cada torta é preparada sob encomenda, recomendamos pedidos com pelo menos <strong style="color:rgba(253,250,244,.7)">48 horas de antecedência</strong>.</div>
-          </div>
+          <div><div class="cpstt">Escolha</div><div class="cpstx">Selecione o sabor e o tamanho ideal para a ocasião</div></div>
         </div>
         <div class="cpstep">
           <div class="cpn">2</div>
-          <div>
-            <div class="cpstt">Defina a entrega</div>
-            <div class="cpstx">Conte-nos se prefere retirar em Moema ou receber em seu endereço. Caso opte pela entrega, verificaremos a disponibilidade da região, o valor do frete e o período mais adequado:<span style="display:block;margin-top:8px;font-style:italic;color:rgba(253,250,244,.32);font-size:11px">Trabalhamos com janelas de entrega e não com horários exatos.</span><ul class="cplist"><li>Período manhã · 9h às 12h</li><li>Período tarde · 14h às 17h</li></ul></div>
-          </div>
+          <div><div class="cpstt">Fale conosco</div><div class="cpstx">Envie mensagem no WhatsApp com <strong style="color:rgba(253,250,244,.7)">antecedência mínima de 2 dias</strong></div></div>
         </div>
         <div class="cpstep">
           <div class="cpn">3</div>
-          <div>
-            <div class="cpstt">Seu pedido entra em produção</div>
-            <div class="cpstx">Após a confirmação do pagamento, sua torta entra em nossa programação de produção. No dia e horário combinado, basta retirar ou aguardar a entrega.</div>
-          </div>
+          <div><div class="cpstt">Receba ou retire</div>          <div class="cpstx">Entregamos nos bairros selecionados ou retire em Moema Indígenas</div></div>
         </div>
       </div>
     </div>
@@ -500,40 +516,37 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     <!-- RIGHT col -->
     <div class="rv ctt-col">
       <div class="map-block">
-        <p class="map-title">Área de atendimento • São Paulo</p>
+        <p class="map-title">Zona de entrega · São Paulo</p>
         <div class="map-wrap">
           <svg viewBox="0 0 480 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
             <defs>
-              <radialGradient id="mg" cx="48%" cy="52%" r="56%"><stop offset="0%" stop-color="rgba(184,135,42,.1)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
-              <radialGradient id="pg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(184,135,42,.35)"/><stop offset="100%" stop-color="rgba(184,135,42,0)"/></radialGradient>
+              <radialGradient id="mg" cx="48%" cy="52%" r="56%"><stop offset="0%" stop-color="rgba(167,116,54,.1)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></radialGradient>
+              <radialGradient id="pg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(167,116,54,.35)"/><stop offset="100%" stop-color="rgba(167,116,54,0)"/></radialGradient>
             </defs>
             <rect width="480" height="310" fill="#14110C"/>
             <rect width="480" height="310" fill="url(#mg)"/>
-            <line x1="0" y1="60"  x2="480" y2="60"  stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="0" y1="120" x2="480" y2="120" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="0" y1="180" x2="480" y2="180" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="0" y1="240" x2="480" y2="240" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="80"  y1="0" x2="80"  y2="310" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="160" y1="0" x2="160" y2="310" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="240" y1="0" x2="240" y2="310" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="320" y1="0" x2="320" y2="310" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="400" y1="0" x2="400" y2="310" stroke="rgba(184,135,42,.04)" stroke-width="1"/>
-            <line x1="120" y1="0" x2="480" y2="200" stroke="rgba(184,135,42,.06)" stroke-width="1.5"/>
-            <line x1="0" y1="100" x2="300" y2="310" stroke="rgba(184,135,42,.06)" stroke-width="1.5"/>
-            <polygon points="200,68 340,100 360,158 330,218 268,248 248,248 118,218 128,168 162,108" fill="rgba(184,135,42,.07)" stroke="rgba(184,135,42,.28)" stroke-width="1" stroke-dasharray="5,4"/>
-            <g transform="translate(200,68)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="-23" y="-12" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">JARDINS</text></g>
-            <g transform="translate(206.45,127.82)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text font-family="Montserrat,sans-serif" font-size="8" fill="rgba(184,135,42,.8)" letter-spacing="1.2" font-weight="500"><tspan x="-28" y="17">VILA NOVA</tspan><tspan x="-30" dy="9.6">CONCEIÇÃO</tspan></text></g>
-            <g transform="translate(162,108)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="-67" y="3" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">ITAIM BIBI</text></g>
-            <g transform="translate(128,168)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="-88" y="3" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">VILA OLÍMPIA</text></g>
-            <g transform="translate(243.5,179.93)"><circle r="22" fill="url(#pg)"/><circle r="8" fill="#D4A845"/><circle r="4" fill="#FDFAF4"/><text x="-22" y="21" font-family="Montserrat,sans-serif" font-size="9" fill="#D4A845" letter-spacing="1.5" font-weight="700">MOEMA</text><text x="-39" y="30" font-family="Montserrat,sans-serif" font-size="7" fill="rgba(212,168,69,.65)" letter-spacing="1">Ponto de retirada</text></g>
-            <g transform="translate(204.45,239.93)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="-37" y="18" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">CAMPO BELO</text></g>
-            <g transform="translate(118,218)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="-68" y="3" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">BROOKLIN</text></g>
-            <g transform="translate(340,100)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="15" y="3" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">PARAÍSO</text></g>
-            <g transform="translate(360,158)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#B8872A"/><text x="10" y="3" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(184,135,42,.85)" letter-spacing="1.5" font-weight="600">VILA MARIANA</text></g>
-            <g transform="translate(324,285)"><circle r="4" fill="#D4A845"/><circle r="2" fill="#FDFAF4"/><text x="10" y="4" font-family="Montserrat,sans-serif" font-size="7.5" fill="rgba(212,168,69,.6)" letter-spacing="1">Retirada</text><circle r="4" cx="80" fill="#B8872A"/><text x="90" y="4" font-family="Montserrat,sans-serif" font-size="7.5" fill="rgba(184,135,42,.6)" letter-spacing="1">Entrega</text></g>
+            <line x1="0" y1="60"  x2="480" y2="60"  stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="0" y1="120" x2="480" y2="120" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="0" y1="180" x2="480" y2="180" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="0" y1="240" x2="480" y2="240" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="80"  y1="0" x2="80"  y2="310" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="310" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="240" y1="0" x2="240" y2="310" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="320" y1="0" x2="320" y2="310" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="310" stroke="rgba(167,116,54,.04)" stroke-width="1"/>
+            <line x1="120" y1="0" x2="480" y2="200" stroke="rgba(167,116,54,.06)" stroke-width="1.5"/>
+            <line x1="0" y1="100" x2="300" y2="310" stroke="rgba(167,116,54,.06)" stroke-width="1.5"/>
+            <polygon points="300,68 248,108 162,108 128,168 118,218 200,248 268,248 330,218 360,158 340,100" fill="rgba(167,116,54,.07)" stroke="rgba(167,116,54,.28)" stroke-width="1" stroke-dasharray="5,4"/>
+            <g transform="translate(300,68)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="10" y="-8" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(167,116,54,.85)" letter-spacing="1.5" font-weight="600">JARDINS</text></g>
+            <g transform="translate(248,108)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="-155" y="4" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(167,116,54,.8)" letter-spacing="1.2" font-weight="500">VL. NOVA CONCEIÇÃO</text></g>
+            <g transform="translate(162,108)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="10" y="-8" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(167,116,54,.85)" letter-spacing="1.5" font-weight="600">ITAIM BIBI</text></g>
+            <g transform="translate(128,168)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="10" y="4" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(167,116,54,.85)" letter-spacing="1.5" font-weight="600">VILA OLÍMPIA</text></g>
+            <g transform="translate(230,188)"><circle r="26" fill="rgba(192,136,64,.12)" stroke="rgba(192,136,64,.45)" stroke-width="1"/><circle r="8" fill="#c08840"/><circle r="4" fill="#FDFAF4"/><text x="-24" y="-20" font-family="Montserrat,sans-serif" font-size="9" fill="#c08840" letter-spacing="1.5" font-weight="700">MOEMA</text><text x="-28" y="-10" font-family="Montserrat,sans-serif" font-size="7" fill="rgba(192,136,64,.65)" letter-spacing="1">✦ retirada aqui</text></g>
+            <g transform="translate(200,248)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="-75" y="-8" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(167,116,54,.85)" letter-spacing="1.5" font-weight="600">CAMPO BELO</text></g>
+            <g transform="translate(118,218)"><circle r="18" fill="url(#pg)"/><circle r="5" fill="#a77436"/><text x="-65" y="4" font-family="Montserrat,sans-serif" font-size="8.5" fill="rgba(167,116,54,.85)" letter-spacing="1.5" font-weight="600">BROOKLIN</text></g>
+            <g transform="translate(24,285)"><circle r="4" fill="#c08840"/><circle r="2" fill="#FDFAF4"/><text x="10" y="4" font-family="Montserrat,sans-serif" font-size="7.5" fill="rgba(192,136,64,.6)" letter-spacing="1">Retirada</text><circle r="4" cx="80" fill="#a77436"/><text x="90" y="4" font-family="Montserrat,sans-serif" font-size="7.5" fill="rgba(167,116,54,.6)" letter-spacing="1">Entrega</text></g>
           </svg>
         </div>
-        <p class="map-note">Ainda não atendemos sua região? <a href="https://wa.me/5511912802740" style="color:rgba(184,135,42,.6);text-decoration:none;border-bottom:1px solid rgba(184,135,42,.25)">Entre em contato</a>. Sempre que possível, buscaremos uma alternativa.</p>
       </div>
     </div>
   </div>
@@ -589,7 +602,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
           <span class="ft-name">La pâte brisée</span>
         </div>
       </div>
-      <p class="fttl">Tortas artesanais • São Paulo</p>
+      <p class="fttl">Tortas Artesanais · São Paulo</p>
       <div class="ftsoc">
         <a href="https://instagram.com/la.pate.brisee" class="fts" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="https://wa.me/5511912802740" class="fts" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
@@ -598,10 +611,10 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     <div>
       <div class="ftlt">Navegação</div>
       <ul class="ftls">
-        <li><a href="#historia">Nossa história</a></li>
-        <li><a href="#produtos">As tortas</a></li>
-        <li><a href="#fundadores">Os fundadores</a></li>
-        <li><a href="#valeurs">Nossos princípios</a></li>
+        <li><a href="#historia">Nossa História</a></li>
+        <li><a href="#produtos">As Tortas</a></li>
+        <li><a href="#fundadores">Os Fundadores</a></li>
+        <li><a href="#valeurs">Nossos Princípios</a></li>
         <li><a href="#contato">Como levar nossas tortas à sua mesa</a></li>
         <li><a href="#newsletter">Newsletter</a></li>
       </ul>
@@ -609,11 +622,11 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
     <div>
       <div class="ftlt">Contato</div>
       <ul class="ftls">
-        <li><a href="https://wa.me/5511912802740" target="_blank" rel="noopener noreferrer">+55 11 91280-2740</a></li>
+        <li><a href="https://wa.me/5511912802740">+55 11 91280-2740</a></li>
         <li><a href="https://instagram.com/la.pate.brisee" target="_blank">@la.pate.brisee</a></li>
         <li><a href="mailto:bonjour@lapatebrisee.com.br">bonjour@lapatebrisee.com.br</a></li>
         <li><a href="#contato" style="display:inline-block;margin-top:6px">Entregas · São Paulo, SP</a></li>
-        <li><a href="#contato">Retirada · Moema</a></li>
+        <li><a href="#contato">Retirada · Moema Indígenas</a></li>
       </ul>
     </div>
   </div>

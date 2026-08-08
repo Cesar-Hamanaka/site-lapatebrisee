@@ -27,8 +27,8 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .ncta{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gd);text-decoration:none;border:1px solid var(--gd);padding:10px 22px;transition:all .3s}
 .ncta:hover{background:var(--gd);color:var(--wh)}
 
-.hero{height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;background:var(--cr);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(167,116,54,.08) 0,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(167,116,54,.06) 0,transparent 50%)}
+.hero{height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;background:url('images/IMG_4596.jpg') center/cover no-repeat;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(28,24,16,.62);z-index:0}
 .hero::after{content:'';position:absolute;top:88px;left:36px;right:36px;bottom:36px;border:1px solid rgba(167,116,54,.18);pointer-events:none}
 .hc{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
 .hmono{width:96px;height:auto;margin-bottom:32px;margin-left:-5px;opacity:0;transform:scale(.8);animation:fisc 1s ease .3s forwards}
@@ -45,6 +45,11 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .hscr{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fi 1s ease 2s forwards}
 .hsct{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--dk2)}
 .hscl{width:1px;height:38px;background:linear-gradient(to bottom,var(--gd),transparent);animation:sp 2s ease infinite}
+.hero .hbn g{fill:#FDFAF4}
+.hero .htag,.hero .hsub{color:rgba(253,250,244,.75)}
+.hero .hsct{color:rgba(253,250,244,.55)}
+.hero .bo{color:#FDFAF4;border-color:rgba(253,250,244,.4)}
+.hero .bo:hover{background:rgba(253,250,244,.1);color:#FDFAF4}
 
 .sec{padding:96px 64px}
 .ey{font-size:9px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gd);display:block;margin-bottom:14px}

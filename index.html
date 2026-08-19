@@ -161,6 +161,7 @@ nav.scr{background:rgba(234,227,212,.96);backdrop-filter:blur(14px);padding:13px
 .fb:hover{background:var(--gd);border-color:var(--gd)}
 .fdis{font-size:10px;color:var(--dk2);opacity:.55;margin-top:6px}
 select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233A3020' opacity='.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;}
+.fi-placeholder{color:rgba(28,24,16,.38)}
 .fsuc{display:none;padding:22px;background:rgba(167,116,54,.1);border:1px solid rgba(167,116,54,.28)}
 .fsuc p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--dk)}
 
@@ -532,29 +533,19 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
       <input type="text" class="fi" placeholder="Nome *" id="ln">
       <input type="tel" class="fi" placeholder="WhatsApp *" id="lw">
     </div>
-    <input type="email" class="fi" placeholder="E-mail *" id="le">
     <div class="frow">
-      <select class="fi" id="lorigem">
+      <input type="email" class="fi" placeholder="E-mail *" id="le">
+      <select class="fi fi-placeholder" id="lorigem" onchange="toggleOutroOrigem(this)">
         <option value="">Como nos conheceu? *</option>
         <option value="Instagram">Instagram</option>
         <option value="Indicação de amigo">Indicação de amigo</option>
+        <option value="WhatsApp">WhatsApp</option>
         <option value="Google">Google</option>
         <option value="Evento">Evento</option>
         <option value="Outros">Outros</option>
       </select>
-      <select class="fi" id="lbairro" onchange="toggleOutroBairro(this)">
-        <option value="">Bairro *</option>
-        <option value="Moema">Moema</option>
-        <option value="Campo Belo">Campo Belo</option>
-        <option value="Brooklin">Brooklin</option>
-        <option value="Vila Olímpia">Vila Olímpia</option>
-        <option value="Vila Nova Conceição">Vila Nova Conceição</option>
-        <option value="Itaim Bibi">Itaim Bibi</option>
-        <option value="Jardins">Jardins</option>
-        <option value="Outro">Outro bairro</option>
-      </select>
     </div>
-    <input type="text" class="fi" id="loutrobairro" placeholder="Qual é o seu bairro?" style="display:none">
+    <input type="text" class="fi" id="loutroorigem" placeholder="Nos conte mais..." style="display:none">
     <button class="fb" onclick="sub()">Quero receber as novidades</button>
     <p class="fdis">Seus dados são protegidos. Nada de spam — apenas o que realmente vale a pena.</p>
   </div>
@@ -570,7 +561,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
           <span class="ft-name">La pâte brisée</span>
         </div>
       </div>
-      <p class="fttl">Tortas Artesanais · São Paulo</p>
+      <p class="fttl">Tortas artesanais • São Paulo</p>
       <div class="ftsoc">
         <a href="https://instagram.com/la.pate.brisee" class="fts" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="https://wa.me/5511912802740" class="fts" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
@@ -612,9 +603,10 @@ let cur=0;
 const sls=document.querySelectorAll('.dps'),dts=document.querySelectorAll('.dpdt');
 function gts(n){sls[cur].classList.remove('act');dts[cur].classList.remove('act');cur=n;sls[cur].classList.add('act');dts[cur].classList.add('act');}
 setInterval(()=>gts((cur+1)%sls.length),5200);
-function toggleOutroBairro(sel){
-  const el=document.getElementById('loutrobairro');
-  const show=sel.value==='Outro';
+function toggleOutroOrigem(sel){
+  sel.classList.toggle('fi-placeholder',sel.value==='');
+  const el=document.getElementById('loutroorigem');
+  const show=sel.value==='Outros';
   el.style.display=show?'block':'none';
   if(!show) el.value='';
 }
@@ -629,15 +621,14 @@ async function sub(){
   const n=document.getElementById('ln').value.trim();
   const e=document.getElementById('le').value.trim();
   const w=document.getElementById('lw').value.trim();
-  const bRaw=document.getElementById('lbairro').value;
-  const b=bRaw==='Outro'?document.getElementById('loutrobairro').value.trim():bRaw;
-  const o=document.getElementById('lorigem').value;
+  const oSel=document.getElementById('lorigem').value;
+  const oTexto=document.getElementById('loutroorigem').value.trim();
+  const o=oSel==='Outros'?(oTexto||'Outros'):oSel;
   if(!n||!e){alert('Por favor, preencha seu nome e e-mail.');return;}
   if(!w){alert('Por favor, informe seu WhatsApp.');return;}
   const phone=fmtPhone(w);
   if(!phone){alert('WhatsApp inválido. Use o formato: (11) 98765-4321.');return;}
-  if(!o){alert('Por favor, informe como nos conheceu.');return;}
-  if(!b){alert(bRaw==='Outro'?'Por favor, informe seu bairro.':'Por favor, selecione seu bairro.');return;}
+  if(!oSel){alert('Por favor, informe como nos conheceu.');return;}
   const btn=document.querySelector('.fb');
   const orig=btn.textContent;
   btn.textContent='Enviando...';
@@ -648,7 +639,7 @@ async function sub(){
       headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
       body:JSON.stringify({
         email:e,
-        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone}),...(b&&{BAIRRO:b}),...(o&&{ORIGEM:o})},
+        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone}),...(o&&{ORIGEM:o})},
         listIds:[3],
         updateEnabled:true
       })

@@ -35,6 +35,16 @@ body{font-family:'Montserrat',sans-serif;background:var(--dk);color:var(--wh);ov
 .bp:hover{background:var(--gd);border-color:var(--gd)}
 .bo{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#FDFAF4;background:transparent;border:1px solid rgba(253,250,244,.4);padding:15px 34px;text-decoration:none;transition:all .3s}
 .bo:hover{background:rgba(253,250,244,.1);color:#FDFAF4}
+
+@media(max-width:768px){
+  .hero::after{top:20px;left:16px;right:16px;bottom:20px}
+  .hmono{width:72px;height:auto;margin-bottom:18px}
+  .hbn{width:clamp(190px,70vw,320px)}
+  .hdiv{margin:14px auto}
+  .htag{margin-top:24px;max-width:88vw;font-size:19px}
+  .hero::before{background:rgba(28,24,16,.72)}
+  .hbtns{margin-top:28px;gap:12px}
+}
 </style>
 </head>
 <body>

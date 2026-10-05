@@ -633,22 +633,22 @@ async function sub(){
   const orig=btn.textContent;
   btn.textContent='Enviando...';
   btn.disabled=true;
+  const attrs={NOME:n,SMS:phone};
+  if(o) attrs.ORIGEM=o;
   try{
-    const r=await fetch('https://api.brevo.com/v3/contacts',{
+    const resp=await fetch('https://api.brevo.com/v3/contacts',{
       method:'POST',
       headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
-      body:JSON.stringify({
-        email:e,
-        attributes:{FIRSTNAME:n,...(phone&&{SMS:phone}),...(o&&{ORIGEM:o})},
-        listIds:[3],
-        updateEnabled:true
-      })
+      body:JSON.stringify({email:e,attributes:attrs,listIds:[3],updateEnabled:true})
     });
-    if(r.ok||r.status===204){
+    const body=await resp.text();
+    console.log('[Brevo]',resp.status,body);
+    if(resp.ok||resp.status===204){
       document.getElementById('lf').style.display='none';
       document.getElementById('fsuc').style.display='block';
     } else {
-      const err=await r.json().catch(()=>({}));
+      let err={};
+      try{err=JSON.parse(body);}catch(x){}
       if(err.code==='duplicate_parameter'){
         document.getElementById('lf').style.display='none';
         document.getElementById('fsuc').style.display='block';
@@ -657,7 +657,8 @@ async function sub(){
         btn.textContent=orig;btn.disabled=false;
       }
     }
-  }catch(e){
+  }catch(err){
+    console.error('[Brevo]',err);
     alert('Erro de conexão. Verifique sua internet e tente novamente.');
     btn.textContent=orig;btn.disabled=false;
   }

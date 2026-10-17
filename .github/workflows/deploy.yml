@@ -24,9 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Injetar API Key do Brevo
-        run: sed -i 's/SUA_API_KEY_AQUI/${{ secrets.BREVO_API_KEY }}/g' index.html
-
       - name: Configurar Pages
         uses: actions/configure-pages@v4
 

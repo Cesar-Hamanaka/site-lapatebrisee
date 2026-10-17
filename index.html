@@ -546,6 +546,7 @@ select.fi{appearance:none;-webkit-appearance:none;background-image:url("data:ima
       </select>
     </div>
     <input type="text" class="fi" id="loutroorigem" placeholder="Nos conte mais..." style="display:none">
+    <input type="text" id="lwebsite" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <button class="fb" onclick="sub()">Quero receber as novidades</button>
     <p class="fdis">Seus dados são protegidos. Nada de spam — apenas o que realmente vale a pena.</p>
   </div>
@@ -610,6 +611,8 @@ function toggleOutroOrigem(sel){
   el.style.display=show?'block':'none';
   if(!show) el.value='';
 }
+// Endereço do Worker da Cloudflare
+const NEWSLETTER_URL='https://lpb-newsletter.cesarhamanaka.workers.dev';
 function fmtPhone(r){
   const d=r.replace(/\D/g,'');
   if(!d) return null;
@@ -633,32 +636,27 @@ async function sub(){
   const orig=btn.textContent;
   btn.textContent='Enviando...';
   btn.disabled=true;
-  const attrs={NOME:n,SMS:phone};
-  if(o) attrs.ORIGEM=o;
   try{
-    const resp=await fetch('https://api.brevo.com/v3/contacts',{
+    const resp=await fetch(NEWSLETTER_URL,{
       method:'POST',
-      headers:{'Content-Type':'application/json','api-key':'SUA_API_KEY_AQUI'},
-      body:JSON.stringify({email:e,attributes:attrs,listIds:[3],updateEnabled:true})
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({nome:n,email:e,whatsapp:phone,origem:o,website:document.getElementById('lwebsite').value})
     });
-    const body=await resp.text();
-    console.log('[Brevo]',resp.status,body);
-    if(resp.ok||resp.status===204){
+    let res={};
+    try{res=await resp.json();}catch(x){}
+    if(resp.ok&&res.ok){
+      if(res.doi) document.querySelector('#fsuc p').textContent='Merci! Enviamos um e-mail para você confirmar sua inscrição.';
       document.getElementById('lf').style.display='none';
       document.getElementById('fsuc').style.display='block';
+    } else if(res.error==='invalid'){
+      alert('Confira seus dados e tente novamente.');
+      btn.textContent=orig;btn.disabled=false;
     } else {
-      let err={};
-      try{err=JSON.parse(body);}catch(x){}
-      if(err.code==='duplicate_parameter'){
-        document.getElementById('lf').style.display='none';
-        document.getElementById('fsuc').style.display='block';
-      } else {
-        alert('Erro ao cadastrar. Tente novamente.');
-        btn.textContent=orig;btn.disabled=false;
-      }
+      alert('Erro ao cadastrar. Tente novamente.');
+      btn.textContent=orig;btn.disabled=false;
     }
   }catch(err){
-    console.error('[Brevo]',err);
+    console.error('[Newsletter]',err);
     alert('Erro de conexão. Verifique sua internet e tente novamente.');
     btn.textContent=orig;btn.disabled=false;
   }
